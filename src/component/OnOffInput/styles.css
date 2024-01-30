@@ -1,0 +1,15 @@
+.onoff-input {
+  button {
+    width: 70px;
+    height: 35px;
+    background: transparent;
+    text-transform: uppercase;
+    color: #989ba2;
+    border: 0;
+    cursor: pointer;
+
+    &.is-selected {
+      color: orange;
+    }
+  }
+}

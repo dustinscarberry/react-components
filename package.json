@@ -25,5 +25,9 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-  }
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
+  },
+  "packageManager": "yarn@4.0.2"
 }
