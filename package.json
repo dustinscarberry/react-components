@@ -5,6 +5,10 @@
   "author": "Dustin Scarberry",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
@@ -13,9 +17,16 @@
     "@storybook/react": "^7.6.10",
     "@storybook/react-webpack5": "^7.6.10",
     "@storybook/test": "^7.6.10",
+    "classnames": "^2.5.1",
+    "postcss": "^8.4.33",
     "prop-types": "15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^7.6.10"
   },
   "peerDependencies": {
@@ -24,10 +35,8 @@
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "classnames": "^2.5.1"
+    "build-storybook": "storybook build",
+    "build": "rollup -c"
   },
   "packageManager": "yarn@4.0.2"
 }
