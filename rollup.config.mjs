@@ -1,8 +1,9 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import postcss from "rollup-plugin-postcss";
+import terser from '@rollup/plugin-terser';
 
 // This is required to read package.json file when
 // using Native ES modules in Node.js
@@ -28,13 +29,17 @@ export default [{
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      presets: ['@babel/preset-react']
+      presets: ['@babel/preset-env', '@babel/preset-react'],
+      babelHelpers: 'bundled'
     }),
     peerDepsExternal(),
     resolve({extensions: ['.js', '.jsx']}),
     commonjs(),
     postcss({
+      extract: true,
+      minimize: true,
       extensions: ['.css']
-    })
+    }),
+    terser()
   ]
 }];
