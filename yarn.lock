@@ -1525,14 +1525,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dustinscarberry/react-components@npm:^1.0.2, @dustinscarberry/react-components@workspace:.":
+"@dustinscarberry/react-components@npm:^1.0.3, @dustinscarberry/react-components@workspace:.":
   version: 0.0.0-use.local
   resolution: "@dustinscarberry/react-components@workspace:."
   dependencies:
     "@babel/core": "npm:^7.23.9"
     "@babel/preset-env": "npm:^7.23.9"
     "@babel/preset-react": "npm:^7.23.3"
-    "@dustinscarberry/react-components": "npm:^1.0.2"
+    "@dustinscarberry/react-components": "npm:^1.0.3"
     "@rollup/plugin-babel": "npm:^6.0.4"
     "@rollup/plugin-commonjs": "npm:^25.0.7"
     "@rollup/plugin-node-resolve": "npm:^15.2.3"
