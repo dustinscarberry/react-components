@@ -1525,6 +1525,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dustinscarberry/react-components@npm:^1.0.2, @dustinscarberry/react-components@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@dustinscarberry/react-components@workspace:."
+  dependencies:
+    "@babel/core": "npm:^7.23.9"
+    "@babel/preset-env": "npm:^7.23.9"
+    "@babel/preset-react": "npm:^7.23.3"
+    "@dustinscarberry/react-components": "npm:^1.0.2"
+    "@rollup/plugin-babel": "npm:^6.0.4"
+    "@rollup/plugin-commonjs": "npm:^25.0.7"
+    "@rollup/plugin-node-resolve": "npm:^15.2.3"
+    "@rollup/plugin-terser": "npm:^0.4.4"
+    "@storybook/addon-essentials": "npm:^7.6.10"
+    "@storybook/addon-interactions": "npm:^7.6.10"
+    "@storybook/addon-links": "npm:^7.6.10"
+    "@storybook/addon-onboarding": "npm:1.0.11"
+    "@storybook/blocks": "npm:^7.6.10"
+    "@storybook/react": "npm:^7.6.10"
+    "@storybook/react-webpack5": "npm:^7.6.10"
+    "@storybook/test": "npm:^7.6.10"
+    classnames: "npm:^2.5.1"
+    postcss: "npm:^8.4.33"
+    prop-types: "npm:15.8.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    rollup: "npm:^4.9.6"
+    rollup-plugin-peer-deps-external: "npm:^2.2.4"
+    rollup-plugin-postcss: "npm:^4.0.2"
+    storybook: "npm:^7.6.10"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
 "@emotion/use-insertion-effect-with-fallbacks@npm:^1.0.0":
   version: 1.0.1
   resolution: "@emotion/use-insertion-effect-with-fallbacks@npm:1.0.1"
@@ -10149,40 +10184,6 @@ __metadata:
   checksum: 48eb73cf71e10841c2a61b6b06ab81da9fffa9876134c239bfdebcf348ce2a47e56b146338e35dfb03512c85966bfc9a53844fc56bc50154e71f8daee59ff6f0
   languageName: node
   linkType: hard
-
-"react-components@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-components@workspace:."
-  dependencies:
-    "@babel/core": "npm:^7.23.9"
-    "@babel/preset-env": "npm:^7.23.9"
-    "@babel/preset-react": "npm:^7.23.3"
-    "@rollup/plugin-babel": "npm:^6.0.4"
-    "@rollup/plugin-commonjs": "npm:^25.0.7"
-    "@rollup/plugin-node-resolve": "npm:^15.2.3"
-    "@rollup/plugin-terser": "npm:^0.4.4"
-    "@storybook/addon-essentials": "npm:^7.6.10"
-    "@storybook/addon-interactions": "npm:^7.6.10"
-    "@storybook/addon-links": "npm:^7.6.10"
-    "@storybook/addon-onboarding": "npm:1.0.11"
-    "@storybook/blocks": "npm:^7.6.10"
-    "@storybook/react": "npm:^7.6.10"
-    "@storybook/react-webpack5": "npm:^7.6.10"
-    "@storybook/test": "npm:^7.6.10"
-    classnames: "npm:^2.5.1"
-    postcss: "npm:^8.4.33"
-    prop-types: "npm:15.8.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    rollup: "npm:^4.9.6"
-    rollup-plugin-peer-deps-external: "npm:^2.2.4"
-    rollup-plugin-postcss: "npm:^4.0.2"
-    storybook: "npm:^7.6.10"
-  peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  languageName: unknown
-  linkType: soft
 
 "react-confetti@npm:^6.1.0":
   version: 6.1.0
