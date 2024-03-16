@@ -9,4 +9,6 @@ RUN apk add --no-cache yarn && \
   yarn build-storybook && \
   apk del yarn
 
+COPY /docker/default.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
