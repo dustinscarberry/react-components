@@ -6,6 +6,7 @@ COPY --chown=nginx:nginx . /usr/share/nginx/html
 
 # build app dependencies
 RUN apk add --no-cache yarn && \
+  yarn install --immutable && \
   yarn build-storybook && \
   apk del yarn
 
