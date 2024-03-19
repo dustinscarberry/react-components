@@ -1,0 +1,106 @@
+
+
+.table-simple {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-simple td, .table-simple th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-simple tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-simple tr:hover {
+  background-color: #ddd;
+}
+
+.table-simple th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: #fff;
+}
+
+
+.table-simple td input[type=text],
+.table-simple td input[type=number] {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  display: inline-block;
+  background: transparent;
+}
+
+.table-simple td input[type=number]::-webkit-outer-spin-button,
+.table-simple td input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.table-simple td input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.table-simple td.empty-cell {
+  background: repeating-linear-gradient(
+    45deg,
+    #bbb,
+    #bbb 10px,
+    #ccc 10px,
+    #ccc 20px
+  );
+}
+
+.react-table .table-toolbar {
+  padding: 1rem 0;
+  display: flex;
+}
+
+.react-table .search-box {
+  flex: 1;
+  text-align: right;
+}
+
+.react-table .search-box label {
+  margin-right: .5rem;
+}
+
+.react-table th {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.react-table .sort-handle {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  color: #eee;
+  margin: 0;
+  border: 0;
+  background: none;
+}
+
+.react-table .sort-handle::after {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z'/%3E%3C/svg%3E") no-repeat 10px 10px fixed;
+}
+
+.react-table .sort-handle.is-active {
+  color: #fff;
+}  
+
+.react-table .sort-handle.sort-asc::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/%3E%3C/svg%3E");
+}
+
+.react-table .sort-handle.sort-desc::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z'/%3E%3C/svg%3E");
+}
