@@ -3,47 +3,34 @@
 .table-simple {
   border-collapse: collapse;
   width: 100%;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
 .table-simple td, .table-simple th {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(208, 212, 228);
   padding: 8px;
-}
-
-.table-simple tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.table-simple tr:hover {
-  background-color: #ddd;
 }
 
 .table-simple th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
-  color: #fff;
+  background-color: #fff;
+  color: #676879;
+  font-weight: 600;
 }
 
-
-.table-simple td input[type=text],
-.table-simple td input[type=number] {
-  padding: 0;
-  border: 0;
-  margin: 0;
-  display: inline-block;
-  background: transparent;
+.table-simple th:hover {
+  background: rgba(103, 104, 121, 0.1);
 }
 
-.table-simple td input[type=number]::-webkit-outer-spin-button,
-.table-simple td input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.table-simple td {
+  color: #333;
 }
 
-.table-simple td input[type=number] {
-  -moz-appearance: textfield;
+.table-simple tbody tr:hover {
+  background: rgba(103, 104, 121, 0.1);
 }
 
 .table-simple td.empty-cell {
@@ -70,6 +57,12 @@
   margin-right: .5rem;
 }
 
+.react-table .search-box input {
+  border-radius: 5px;
+  border: 1px solid rgb(208, 212, 228);
+  padding: 5px;
+}
+
 .react-table th {
   position: relative;
   padding-right: 2rem;
@@ -77,7 +70,7 @@
 
 .react-table .sort-handle {
   position: absolute;
-  right: 1rem;
+  right: 0;
   cursor: pointer;
   color: #eee;
   margin: 0;
@@ -88,19 +81,22 @@
 .react-table .sort-handle::after {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z'/%3E%3C/svg%3E") no-repeat 10px 10px fixed;
+  width: 15px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23676879' d='M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
 }
 
 .react-table .sort-handle.is-active {
-  color: #fff;
+  color: #333;
 }  
 
 .react-table .sort-handle.sort-asc::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23676879' d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
 }
 
 .react-table .sort-handle.sort-desc::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z'/%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23676879' d='M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
 }

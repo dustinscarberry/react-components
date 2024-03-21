@@ -44,7 +44,7 @@ export const Basic = {
           value: 'Today'
         },
         {
-          value: <button>Update</button>
+          value: <button className="demo-btn">Update</button>
         }
       ],
       metaData: {}
@@ -70,7 +70,7 @@ export const Basic = {
           value: 'Yesterday'
         },
         {
-          value: <button>Update</button>
+          value: <button className="demo-btn">Update</button>
         }
       ],
       metaData: {}
@@ -96,7 +96,7 @@ export const Basic = {
           value: 'Today'
         },
         {
-          value: <button>Update</button>
+          value: <button className="demo-btn">Update</button>
         }
       ],
       metaData: {}
@@ -122,7 +122,7 @@ export const Basic = {
           value: 'Today'
         },
         {
-          value: <button>Update</button>
+          value: <button className="demo-btn">Update</button>
         }
       ],
       metaData: {}

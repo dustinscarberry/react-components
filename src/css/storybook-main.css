@@ -1,0 +1,16 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.demo-btn {
+  background: rgb(0, 115, 234);
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.demo-btn:hover {
+  background: #0060b9;
+}
