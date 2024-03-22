@@ -66,12 +66,12 @@
 .react-table th {
   position: relative;
   padding-right: 2rem;
+  cursor: pointer;
 }
 
 .react-table .sort-handle {
   position: absolute;
   right: 0;
-  cursor: pointer;
   color: #eee;
   margin: 0;
   border: 0;

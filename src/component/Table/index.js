@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import classnames from 'classnames';
+import TableHead from './TableHead';
+import TableBody from './TableBody';
 import './styles.css';
 
 const Table = ({headers, data, searchable, sortable}) => {
@@ -16,53 +17,6 @@ const Table = ({headers, data, searchable, sortable}) => {
     setSortDirection(sortDirection == 'asc' ? 'desc' : 'asc');
   }
 
-  const filterAndSortData = (data) => {
-    let filteredAndSortedData = [...data];
-
-    // search filter
-    if (searchable && search != '') {
-      filteredAndSortedData = filteredAndSortedData.filter(item => { 
-        return item.rowData.some((s, index) => {
-          // bypass search for non searchable columns
-          if ('searchable' in headers[index] && headers[index].searchable == false)
-            return false;
-      
-          // use search value if specified
-          if ('searchValue' in s)
-            return s.searchValue.includes(search);
-          
-          // search on base data
-          return s.value.includes(search);
-        });
-      });
-    }
-
-    // sort filter
-    if (sortable && sortColumn != undefined) {
-      filteredAndSortedData.sort(function(a, b) {
-        const aValue = 'sortValue' in a.rowData[sortColumn]
-          ? a.rowData[sortColumn].sortValue
-          : a.rowData[sortColumn].value;
-        const bValue = 'sortValue' in b.rowData[sortColumn]
-          ? b.rowData[sortColumn].sortValue
-          : b.rowData[sortColumn].value;
-
-        if (aValue < bValue) {
-          if (sortDirection == 'asc') return -1;
-          if (sortDirection == 'desc') return 1;
-        }
-        else {
-          if (sortDirection == 'asc') return 1;
-          if (sortDirection == 'desc') return -1; 
-        }
-      });
-    }
-
-    return filteredAndSortedData;
-  }
-
-  const filteredAndSortedData = filterAndSortData(data);
-
   return <div className="react-table">
     <div className="table-toolbar">
       {searchable &&
@@ -73,39 +27,22 @@ const Table = ({headers, data, searchable, sortable}) => {
       }
     </div>
     <table className="table-simple">
-      <thead>
-        <tr>
-          {headers.map((header, i) => {
-            return <th key={i}>
-              {header.title}
-              {sortable && ('sortable' in header && header.sortable != false || !('sortable' in header)) &&
-                <button
-                  className={
-                    classnames(
-                      'sort-handle',
-                      {
-                        'is-active': i == sortColumn,
-                        'sort-asc': sortDirection == 'asc' && i == sortColumn,
-                        'sort-desc': sortDirection == 'desc' && i == sortColumn
-                      }
-                    )
-                  }
-                  onClick={() => handleTableSort(i)}
-                ></button>
-              }
-            </th>
-          })}
-        </tr>
-      </thead>
-      <tbody>
-        {filteredAndSortedData.map((row, i) => {    
-          return <tr key={i}>
-            {row.rowData.map((item, j) => {
-              return <td key={j}>{item.value}</td>
-            })}
-          </tr>
-        })}
-      </tbody>
+      <TableHead
+        headers={headers}
+        sortable={sortable}
+        sortColumn={sortColumn}
+        sortDirection={sortDirection}
+        handleTableSort={handleTableSort}
+      />
+      <TableBody
+        headers={headers}
+        data={data}
+        searchable={searchable}
+        search={search}
+        sortable={sortable}
+        sortColumn={sortColumn}
+        sortDirection={sortDirection}
+      />
     </table>
   </div>
 }
