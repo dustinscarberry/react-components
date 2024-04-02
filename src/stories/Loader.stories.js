@@ -9,8 +9,28 @@ export default {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
+  argTypes: {
+    type: {
+      options: ['default', 'trailing', 'squares'],
+      control: { type: 'radio' }
+    }
+  }
 };
 
-export const Basic = {
-
+export const Default = {
+  args: {
+    type: 'default',
+  }
 };
+
+export const Trailing = {
+  args: {
+    type: 'trailing'
+  }
+}
+
+export const Squares = {
+  args: {
+    type: 'squares'
+  }
+}
