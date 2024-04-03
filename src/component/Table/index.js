@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import TableHead from './TableHead';
 import TableBody from './TableBody';
 import './styles.css';
 
-const Table = ({headers, data, searchable, sortable}) => {
+const Table = ({headers, data, searchable = false, sortable = false}) => {
   const [search, setSearch] = useState('');
   const [sortColumn, setSortColumn] = useState(undefined);
   const [sortDirection, setSortDirection] = useState('desc');
@@ -47,11 +48,23 @@ const Table = ({headers, data, searchable, sortable}) => {
   </div>
 }
 
-Table.defaultProps = {
-  headers: undefined,
-  data: undefined,
-  searchable: false,
-  sortable: false
+Table.propTypes = {
+  /**
+   * Table headers
+  */
+  headers: PropTypes.arrayOf(PropTypes.object),
+  /**
+   * Table data
+   */
+  data: PropTypes.arrayOf(PropTypes.object),
+  /**
+   * Is table searchable?
+   */
+  searchable: PropTypes.bool,
+  /**
+   * Is table sortable?
+   */
+  sortable: PropTypes.bool
 }
 
 export default Table;

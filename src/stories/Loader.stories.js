@@ -11,8 +11,8 @@ export default {
   },
   argTypes: {
     type: {
-      options: ['default', 'trailing', 'squares'],
-      control: { type: 'radio' }
+      options: ['default', 'trailing', 'squares', 'bounce'],
+      control: { type: 'select' }
     }
   }
 };
@@ -32,5 +32,11 @@ export const Trailing = {
 export const Squares = {
   args: {
     type: 'squares'
+  }
+}
+
+export const Bounce = {
+  args: {
+    type: 'bounce'
   }
 }

@@ -23,6 +23,12 @@ const Loader = ({type = 'default'}) => {
       <div class="sk-cube sk-cube8"></div>
       <div class="sk-cube sk-cube9"></div>
     </div>
+  else if (type == 'bounce')
+    return <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
   else
     return <div className="loader"></div>
 }
