@@ -128,6 +128,15 @@ export const Basic = {
       metaData: {}
     }],
     searchable: true,
-    sortable: true
+    sortable: true,
+    pageSize: 50,
+    totalRecords: 123,
+    navigateNextPage: (page, stepSize) => {
+      alert('Next page requested')
+    },
+    navigatePreviousPage: (page, stepSize) => {
+      alert('Previous page requested');
+    },
+    showLoader: false
   }
 };

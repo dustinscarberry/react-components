@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import TableHead from './TableHead';
 import TableBody from './TableBody';
+import TableFooter from './TableFooter';
 import './styles.css';
 
-const Table = ({headers, data, searchable = false, sortable = false}) => {
+const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, currentPage = 1, navigateNextPage, navigatePreviousPage, showLoader = false}) => {
   const [search, setSearch] = useState('');
   const [sortColumn, setSortColumn] = useState(undefined);
   const [sortDirection, setSortDirection] = useState('desc');
@@ -45,6 +46,12 @@ const Table = ({headers, data, searchable = false, sortable = false}) => {
         sortDirection={sortDirection}
       />
     </table>
+    <TableFooter
+      navigateNextPage={navigateNextPage}
+      navigatePreviousPage={navigatePreviousPage}
+      pageSize={pageSize}
+      totalRecords={totalRecords}
+    />
   </div>
 }
 
@@ -64,7 +71,31 @@ Table.propTypes = {
   /**
    * Is table sortable?
    */
-  sortable: PropTypes.bool
+  sortable: PropTypes.bool,
+  /**
+   * Total records in the table
+   */
+  totalRecords: PropTypes.number,
+  /**
+   * Page size of table records
+   */
+  pageSize: PropTypes.number,
+  /**
+   * Current page
+   */
+  currentPage: PropTypes.number,
+  /**
+   * Navigate next page function
+   */
+  navigateNextPage: PropTypes.func,
+  /**
+   * Navigate previous page function
+   */
+  navigatePreviousPage: PropTypes.func,
+  /**
+   * Show loader when paging between datasets
+   */
+  showLoader: PropTypes.bool
 }
 
 export default Table;
