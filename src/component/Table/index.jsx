@@ -5,10 +5,11 @@ import TableBody from './TableBody';
 import TableFooter from './TableFooter';
 import './styles.css';
 
-const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, currentPage = 1, navigateNextPage, navigatePreviousPage, showLoader = false}) => {
+const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, showLoader = false, fetchData}) => {
   const [search, setSearch] = useState('');
   const [sortColumn, setSortColumn] = useState(undefined);
   const [sortDirection, setSortDirection] = useState('desc');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleTableSearch = (e) => {
     setSearch(e.target.value);
@@ -17,6 +18,13 @@ const Table = ({headers, data, searchable = false, sortable = false, totalRecord
   const handleTableSort = (column) => {
     setSortColumn(column);
     setSortDirection(sortDirection == 'asc' ? 'desc' : 'asc');
+  }
+
+  const handleNavigatePage = (direction) => {
+
+
+
+    // fetchData(page, pageSize)
   }
 
   return <div className="react-table">
@@ -47,8 +55,8 @@ const Table = ({headers, data, searchable = false, sortable = false, totalRecord
       />
     </table>
     <TableFooter
-      navigateNextPage={navigateNextPage}
-      navigatePreviousPage={navigatePreviousPage}
+      navigatePage={handleNavigatePage}
+      currentPage={currentPage}
       pageSize={pageSize}
       totalRecords={totalRecords}
     />
