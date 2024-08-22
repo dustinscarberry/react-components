@@ -131,11 +131,9 @@ export const Basic = {
     sortable: true,
     pageSize: 50,
     totalRecords: 123,
-    navigateNextPage: (page, stepSize) => {
-      alert('Next page requested')
-    },
-    navigatePreviousPage: (page, stepSize) => {
-      alert('Previous page requested');
+    fetchData: (page, options) => {
+      console.log(page);
+      console.log(options);
     },
     showLoader: false
   }

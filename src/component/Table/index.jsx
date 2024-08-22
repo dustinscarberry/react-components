@@ -21,10 +21,16 @@ const Table = ({headers, data, searchable = false, sortable = false, totalRecord
   }
 
   const handleNavigatePage = (direction) => {
+    if (!fetchData) return;
 
-
-
-    // fetchData(page, pageSize)
+    const options = {totalRecords: totalRecords, sortColumn: sortColumn, sortDirection: sortDirection};
+    if (direction == 'previous') {
+      fetchData(currentPage - 1, options);
+      setCurrentPage(currentPage - 1);
+    } else if (direction == 'next') {
+      fetchData(currentPage + 1, options);
+      setCurrentPage(currentPage + 1);
+    }
   }
 
   return <div className="react-table">
@@ -89,17 +95,9 @@ Table.propTypes = {
    */
   pageSize: PropTypes.number,
   /**
-   * Current page
+   * Fetch data function for pagination
    */
-  currentPage: PropTypes.number,
-  /**
-   * Navigate next page function
-   */
-  navigateNextPage: PropTypes.func,
-  /**
-   * Navigate previous page function
-   */
-  navigatePreviousPage: PropTypes.func,
+  fetchData: PropTypes.func,
   /**
    * Show loader when paging between datasets
    */
