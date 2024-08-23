@@ -23,12 +23,12 @@ const Table = ({headers, data, searchable = false, sortable = false, totalRecord
   const handleNavigatePage = (direction) => {
     if (!fetchData) return;
 
-    const options = {totalRecords: totalRecords, sortColumn: sortColumn, sortDirection: sortDirection};
+    const args = {pageSize: pageSize, sortColumn: sortColumn, sortDirection: sortDirection};
     if (direction == 'previous') {
-      fetchData(currentPage - 1, options);
+      fetchData(currentPage - 1, args);
       setCurrentPage(currentPage - 1);
     } else if (direction == 'next') {
-      fetchData(currentPage + 1, options);
+      fetchData(currentPage + 1, args);
       setCurrentPage(currentPage + 1);
     }
   }
