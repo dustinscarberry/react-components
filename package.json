@@ -1,6 +1,6 @@
 {
   "name": "@dustinscarberry/react-components",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -8,6 +8,12 @@
   ],
   "author": "Dustin Scarberry",
   "license": "MIT",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "rollup -c",
+    "publish": "npm publish --access public"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
@@ -37,11 +43,6 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build": "rollup -c"
   },
   "packageManager": "yarn@4.0.2"
 }
