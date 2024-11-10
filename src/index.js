@@ -7,6 +7,7 @@ import NumberInput from './component/NumberInput';
 import TextInput from './component/TextInput';
 import Toggle from './component/Toggle';
 import Table from './component/Table';
+import SnackBar from './component/SnackBar';
 
 export {
   Label,
@@ -17,5 +18,6 @@ export {
   NumberInput,
   TextInput,
   Toggle,
-  Table
+  Table,
+  SnackBar
 };
