@@ -1,6 +1,6 @@
 {
   "name": "@dustinscarberry/react-components",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -12,7 +12,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "rollup -c",
-    "publish": "npm publish --access public"
+    "publishnpm": "npm publish --access public"
   },
   "devDependencies": {
     "@babel/core": "^7.26.8",
@@ -45,17 +45,16 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "sass-loader": "^16.0.4",
-    "storybook": "^8.5.3"
+    "storybook": "^8.5.3",
+    "@storybook/node-logger": "^8.5.3",
+    "css-loader": "^7.1.2",
+    "sass": "^1.84.0",
+    "style-loader": "^4.0.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "packageManager": "yarn@4.0.2",
-  "dependencies": {
-    "@storybook/node-logger": "^8.5.3",
-    "css-loader": "^7.1.2",
-    "sass": "^1.84.0",
-    "style-loader": "^4.0.0"
-  }
+  "dependencies": {}
 }
