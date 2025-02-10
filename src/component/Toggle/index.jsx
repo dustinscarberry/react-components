@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
+import './styles.scss';
 
 const Toggle = ({name, checked = false, onChange}) => {
   return <div className="toggle-inline-wrapper">

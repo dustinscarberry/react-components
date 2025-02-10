@@ -1,0 +1,155 @@
+.table-simple {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 5px;
+
+  td,
+  th {
+    border: 1px solid rgb(208, 212, 228);
+    padding: 8px;
+  }
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fff;
+    color: #676879;
+    font-weight: 600;
+
+    &:hover {
+      background: rgba(103, 104, 121, 0.1);
+    }
+  }
+
+  td {
+    color: #333;
+
+    &.empty-cell {
+      background: repeating-linear-gradient(
+        45deg,
+        #bbb,
+        #bbb 10px,
+        #ccc 10px,
+        #ccc 20px
+      );
+    }
+  }
+
+  tbody tr:hover {
+    background: rgba(103, 104, 121, 0.1);
+  }
+}
+
+.react-table {
+  .table-toolbar {
+    padding: 1rem 0;
+    display: flex;
+  }
+
+  .search-box {
+    flex: 1;
+    text-align: right;
+
+    label {
+      margin-right: .5rem;
+    }
+
+    input {
+      border-radius: 5px;
+      border: 1px solid rgb(208, 212, 228);
+      padding: 5px;
+    }
+  }
+
+  th {
+    position: relative;
+    padding-right: 2rem;
+    cursor: pointer;
+
+    &.sort-desc,
+    &.sort-asc {
+      padding-left: 1.7rem;
+    }
+  }
+
+  .sort-handle {
+    position: absolute;
+    left: 0;
+    color: #eee;
+    margin: 0;
+    border: 0;
+    background: none;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 15px;
+      height: 15px;
+    }
+
+    &.is-active {
+      color: #333;
+    }
+  }
+
+  .sort-desc .sort-handle::after {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>') no-repeat;
+    background-size: contain;
+  }
+
+  .sort-asc .sort-handle::after {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>') no-repeat;
+    background-size: contain;
+  }
+
+  .react-table-footer {
+    display: flex;
+    margin-top: 15px;
+
+    .footer-record-count {
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .footer-pagination {
+      flex: 1;
+      text-align: right;
+      font-size: 14px;
+
+      .page-left,
+      .page-right {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        transition: transform .2s linear;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        &.is-active::after {
+          opacity: 1;
+        }
+      }
+
+      .page-left::after {
+        opacity: .65;
+        display: inline-block; 
+        line-height: 1;
+        width: 12px;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z'/%3E%3C/svg%3E"); 
+      }
+
+      .page-right::after {
+        opacity: .65;
+        display: inline-block; 
+        line-height: 1;
+        width: 12px;
+        font-size: 14px;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E"); 
+      }
+    }
+  }
+}

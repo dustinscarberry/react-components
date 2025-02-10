@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TableHead from './TableHead';
 import TableBody from './TableBody';
 import TableFooter from './TableFooter';
-import './styles.css';
+import './styles.scss';
 
 const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, showLoader = false, fetchData}) => {
   const [search, setSearch] = useState('');

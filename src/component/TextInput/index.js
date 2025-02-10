@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './styles.scss';
 import PropTypes from 'prop-types';
 
 const TextInput = ({name, value = '', onChange, onBlur, readonly = false, autoFocus}) => {

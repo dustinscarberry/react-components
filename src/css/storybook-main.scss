@@ -9,8 +9,9 @@ body {
   border: 0;
   padding: 8px;
   cursor: pointer;
+
+  &:hover {
+    background: #0060b9;
+  }
 }
 
-.demo-btn:hover {
-  background: #0060b9;
-}

@@ -1,0 +1,64 @@
+.form-control {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  font-family: Arial, sans-serif;
+  appearance: none;
+  color: #2c2c2c;
+  outline: 0;
+  padding: 8px 12px;
+  line-height: normal;
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: middle;
+  min-height: 35px;
+  transition: all 0.12s ease;
+  box-shadow: none;
+  border-radius: 2px;
+  transition: background 0.2s linear 0s;
+  background: #F6F3F4;
+  width: 100%;
+
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: #e7e7e7;
+    outline: 0 !important;
+    box-shadow: none;
+    border-color: #999;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 0.7;
+    }
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.33;
+  }
+
+  &[disabled],
+  &[readonly] {
+    background: #f3f3f3;
+    color: rgba(87, 87, 87, 0.75);
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border-color: transparent;
+  
+    &:focus {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+  
+  &.is-invalid {
+    border: 1px solid red;
+  }
+}
+
+fieldset[disabled] .form-control {
+  background: #f3f3f3;
+  color: rgba(87, 87, 87, 0.75);
+}

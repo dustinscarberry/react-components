@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './styles.scss';
 import PropTypes from 'prop-types';
 
 const SelectBox = ({name, value = '', options = [], includeBlank = false, onChange}) => {

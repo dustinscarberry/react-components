@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import './styles.css';
+import './styles.scss';
 
 const OnOffInput = ({name, value = true, onChange}) => {
   return <div className="onoff-input">

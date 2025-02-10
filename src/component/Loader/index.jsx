@@ -1,5 +1,6 @@
 import React from 'react';
-import './styles.css';
+import PropTypes from 'prop-types';
+import './styles.scss';
 
 const Loader = ({type = 'default'}) => {
   if (type == 'trailing')
@@ -30,7 +31,11 @@ const Loader = ({type = 'default'}) => {
       <div class="bounce3"></div>
     </div>
   else
-    return <div className="loader"></div>
+    return <div className="default-loader"></div>
+}
+
+Loader.propTypes = {
+  type: PropTypes.string
 }
 
 export default Loader;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
-import './styles.css';
+import './styles.scss';
 import PropTypes from 'prop-types';
 
 const SnackBar = ({
