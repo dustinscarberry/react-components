@@ -32,3 +32,10 @@ const App = () => {
   />
 }
 ```
+
+## Upgrading
+
+```bash
+npx storybook@latest upgrade
+yarn upgrade-interactive
+```
