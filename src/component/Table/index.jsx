@@ -5,7 +5,7 @@ import TableBody from './TableBody';
 import TableFooter from './TableFooter';
 import './styles.scss';
 
-const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, showLoader = false, fetchData}) => {
+const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, showLoader = false, fetchData, noRecordsText = 'No records found'}) => {
   const [search, setSearch] = useState('');
   const [sortColumn, setSortColumn] = useState(undefined);
   const [sortDirection, setSortDirection] = useState('desc');
@@ -58,6 +58,7 @@ const Table = ({headers, data, searchable = false, sortable = false, totalRecord
         sortable={sortable}
         sortColumn={sortColumn}
         sortDirection={sortDirection}
+        noRecordsText={noRecordsText}
       />
     </table>
     <TableFooter
@@ -101,7 +102,11 @@ Table.propTypes = {
   /**
    * Show loader when paging between datasets
    */
-  showLoader: PropTypes.bool
+  showLoader: PropTypes.bool,
+  /**
+   * No records message to display
+   */
+  noRecordsText: PropTypes.string
 }
 
 export default Table;

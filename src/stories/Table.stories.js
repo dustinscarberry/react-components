@@ -138,3 +138,26 @@ export const Basic = {
     showLoader: false
   }
 };
+
+export const Empty = {
+  args: {
+    headers: [
+      {title: 'First Name'},
+      {title: 'Last Name'},
+      {title: 'BirthDate'},
+      {title: 'Age'},
+      {title: 'Last Updated'},
+      {title: '', searchable: false, sortable: false}
+    ],
+    data: [],
+    searchable: true,
+    sortable: true,
+    pageSize: 50,
+    totalRecords: 0,
+    fetchData: (page, options) => {
+      console.log(page);
+      console.log(options);
+    },
+    showLoader: false
+  }
+};

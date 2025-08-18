@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TableBody = ({headers, data, searchable, search, sortable, sortColumn, sortDirection}) => {
+const TableBody = ({headers, data, searchable, search, sortable, sortColumn, sortDirection, noRecordsText}) => {
   const filterAndSortData = (data) => {
     let filteredAndSortedData = [...data];
 
@@ -49,6 +49,13 @@ const TableBody = ({headers, data, searchable, search, sortable, sortColumn, sor
   }
 
   const filteredAndSortedData = filterAndSortData(data);
+
+  if (filteredAndSortedData.length == 0)
+    return <tbody>
+      <tr>
+        <td colspan="100%" style={{textAlign: 'center'}}>{noRecordsText}</td>
+      </tr>
+    </tbody>
 
   return <tbody>
     {filteredAndSortedData.map((row, i) => {    
