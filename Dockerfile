@@ -5,7 +5,7 @@ WORKDIR /usr/share/nginx/html
 
 COPY --chown=nginx:nginx . /usr/share/nginx/html
 
-RUN apk add --no-cache yarn && \
+RUN apk upgrade && apk add --no-cache yarn && \
   yarn install --immutable && \
   yarn build-storybook && \
   apk del yarn
