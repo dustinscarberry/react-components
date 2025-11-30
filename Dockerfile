@@ -1,14 +1,12 @@
 # stage 1
-FROM nginx:mainline-alpine as builder
+FROM node:24-trixie AS builder
 
 WORKDIR /usr/share/nginx/html
 
 COPY --chown=nginx:nginx . /usr/share/nginx/html
 
-RUN apk upgrade && apk add --no-cache yarn && \
-  yarn install --immutable && \
-  yarn build-storybook && \
-  apk del yarn
+RUN yarn install --immutable && \
+  yarn build-storybook
 
 # stage 2
 FROM nginx:mainline-alpine
