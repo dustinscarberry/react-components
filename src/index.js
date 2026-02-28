@@ -8,6 +8,7 @@ import TextInput from './component/TextInput';
 import Toggle from './component/Toggle';
 import Table from './component/Table';
 import SnackBar from './component/SnackBar';
+import InfoField from './component/InfoField';
 
 export {
   Label,
@@ -19,5 +20,6 @@ export {
   TextInput,
   Toggle,
   Table,
-  SnackBar
+  SnackBar,
+  InfoField
 };

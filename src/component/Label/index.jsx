@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.scss';
 
 const Label = ({text, helpInfo}) => {
-  return <label>
+  return <label title={helpInfo}>
     {text}
     {helpInfo &&
-      <i className="form-label-help fas fa-question-circle"></i>
+      <i className="form-label-help"></i>
     }
   </label>
 }
@@ -16,9 +17,9 @@ Label.propTypes = {
    */
   text: PropTypes.string,
   /**
-   * Show help bubble or not
+   * Show help bubble text (no bubble if not set)
    */
-  helpInfo: PropTypes.bool
+  helpInfo: PropTypes.string
 };
 
 export default Label;
