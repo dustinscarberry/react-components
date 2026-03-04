@@ -134,8 +134,7 @@ export const Basic = {
     fetchData: (page, options) => {
       console.log(page);
       console.log(options);
-    },
-    showLoader: false
+    }
   }
 };
 
@@ -157,7 +156,6 @@ export const Empty = {
     fetchData: (page, options) => {
       console.log(page);
       console.log(options);
-    },
-    showLoader: false
+    }
   }
 };

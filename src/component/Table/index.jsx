@@ -1,15 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import TableHead from './TableHead';
 import TableBody from './TableBody';
 import TableFooter from './TableFooter';
+import { useDebounce } from './logic';
 import './styles.scss';
 
-const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, showLoader = false, fetchData, noRecordsText = 'No records found'}) => {
+const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, fetchData, noRecordsText = 'No records found'}) => {
   const [search, setSearch] = useState('');
   const [sortColumn, setSortColumn] = useState(undefined);
   const [sortDirection, setSortDirection] = useState('desc');
   const [currentPage, setCurrentPage] = useState(1);
+
+  // server side search for text
+  if (fetchData) {
+    const debouncedSearch = useDebounce(search, 400);
+    useEffect(() => {
+      fetchData({
+        currentPage: currentPage,
+        pageSize: pageSize,
+        sortColumn: sortColumn,
+        sortDirection: sortDirection,
+        searchText: search
+      });
+    }, [debouncedSearch]);
+  }
 
   const handleTableSearch = (e) => {
     setSearch(e.target.value);
@@ -23,14 +38,19 @@ const Table = ({headers, data, searchable = false, sortable = false, totalRecord
   const handleNavigatePage = (direction) => {
     if (!fetchData) return;
 
-    const args = {pageSize: pageSize, sortColumn: sortColumn, sortDirection: sortDirection};
     if (direction == 'previous') {
-      fetchData(currentPage - 1, args);
       setCurrentPage(currentPage - 1);
     } else if (direction == 'next') {
-      fetchData(currentPage + 1, args);
       setCurrentPage(currentPage + 1);
     }
+
+    fetchData({
+      currentPage: (direction == 'previous' ? currentPage - 1 : currentPage + 1),
+      pageSize: pageSize,
+      sortColumn: sortColumn,
+      sortDirection: sortDirection,
+      searchText: search
+    });
   }
 
   return <div className="react-table">
@@ -99,10 +119,6 @@ Table.propTypes = {
    * Fetch data function for pagination
    */
   fetchData: PropTypes.func,
-  /**
-   * Show loader when paging between datasets
-   */
-  showLoader: PropTypes.bool,
   /**
    * No records message to display
    */
