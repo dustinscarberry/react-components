@@ -1197,12 +1197,12 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:^29.0.0"
     "@rollup/plugin-node-resolve": "npm:^16.0.3"
     "@rollup/plugin-terser": "npm:^0.4.4"
-    "@storybook/addon-docs": "npm:^10.1.2"
-    "@storybook/addon-links": "npm:^10.1.2"
-    "@storybook/addon-onboarding": "npm:^10.1.2"
+    "@storybook/addon-docs": "npm:^10.2.15"
+    "@storybook/addon-links": "npm:^10.2.15"
+    "@storybook/addon-onboarding": "npm:^10.2.15"
     "@storybook/addon-styling-webpack": "npm:^3.0.0"
     "@storybook/addon-webpack5-compiler-swc": "npm:^4.0.2"
-    "@storybook/react-webpack5": "npm:^10.1.2"
+    "@storybook/react-webpack5": "npm:^10.2.15"
     classnames: "npm:^2.5.1"
     css-loader: "npm:^7.1.4"
     postcss: "npm:^8.5.8"
@@ -1216,7 +1216,7 @@ __metadata:
     rollup-plugin-postcss: "npm:^4.0.2"
     sass: "npm:^1.97.3"
     sass-loader: "npm:^16.0.7"
-    storybook: "npm:^10.1.2"
+    storybook: "npm:^10.2.15"
     style-loader: "npm:^4.0.0"
   peerDependencies:
     react: ^18.2.0
@@ -1920,7 +1920,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-docs@npm:^10.1.2":
+"@storybook/addon-docs@npm:^10.2.15":
   version: 10.2.15
   resolution: "@storybook/addon-docs@npm:10.2.15"
   dependencies:
@@ -1937,7 +1937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^10.1.2":
+"@storybook/addon-links@npm:^10.2.15":
   version: 10.2.15
   resolution: "@storybook/addon-links@npm:10.2.15"
   dependencies:
@@ -1952,7 +1952,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-onboarding@npm:^10.1.2":
+"@storybook/addon-onboarding@npm:^10.2.15":
   version: 10.2.15
   resolution: "@storybook/addon-onboarding@npm:10.2.15"
   peerDependencies:
@@ -2116,7 +2116,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-webpack5@npm:^10.1.2":
+"@storybook/react-webpack5@npm:^10.2.15":
   version: 10.2.15
   resolution: "@storybook/react-webpack5@npm:10.2.15"
   dependencies:
@@ -6125,7 +6125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^10.1.2":
+"storybook@npm:^10.2.15":
   version: 10.2.15
   resolution: "storybook@npm:10.2.15"
   dependencies:
