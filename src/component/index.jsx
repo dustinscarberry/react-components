@@ -10,3 +10,4 @@ export * from './Table';
 export * from './TextArea';
 export * from './TextInput';
 export * from './Toggle';
+export * from './Modal';

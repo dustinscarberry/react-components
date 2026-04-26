@@ -7,3 +7,7 @@ export * from './Info';
 export * from './Success';
 export * from './Times';
 export * from './Warning';
+export * from './Bookmark';
+export * from './Checkmark';
+export * from './Refresh';
+export * from './TrashCan';
