@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-const Label = ({text, helpInfo}) => {
-  return <label title={helpInfo}>
+export const Label = ({text, helpInfo}) => {
+  return <label className="rc-label" title={helpInfo}>
     {text}
     {helpInfo &&
       <i className="form-label-help"></i>

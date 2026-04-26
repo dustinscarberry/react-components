@@ -3,8 +3,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-const OnOffInput = ({name, value = true, onChange}) => {
-  return <div className="onoff-input">
+export const OnOffInput = ({name, value = true, onChange}) => {
+  return <div className="rc-onoff-input">
     <button className={classnames({'is-selected': !value})} onClick={() => onChange(name, false)}>Off</button>
     <button className={classnames({'is-selected': value})} onClick={() => onChange(name, true)}>On</button>
   </div>

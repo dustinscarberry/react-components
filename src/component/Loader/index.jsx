@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-const Loader = ({type = 'default'}) => {
+export const Loader = ({type = 'default'}) => {
   if (type == 'trailing')
-    return <div class="sk-chase">
+    return <div class="rc-sk-chase-loader">
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
@@ -12,8 +12,8 @@ const Loader = ({type = 'default'}) => {
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
     </div>
-  else if (type == 'squares') 
-    return <div class="sk-cube-grid">
+  else if (type == 'squares')
+    return <div class="rc-sk-cube-grid-loader">
       <div class="sk-cube sk-cube1"></div>
       <div class="sk-cube sk-cube2"></div>
       <div class="sk-cube sk-cube3"></div>
@@ -25,13 +25,13 @@ const Loader = ({type = 'default'}) => {
       <div class="sk-cube sk-cube9"></div>
     </div>
   else if (type == 'bounce')
-    return <div class="spinner">
+    return <div class="rc-spinner-loader">
       <div class="bounce1"></div>
       <div class="bounce2"></div>
       <div class="bounce3"></div>
     </div>
   else
-    return <div className="default-loader"></div>
+    return <div className="rc-default-loader"></div>
 }
 
 Loader.propTypes = {

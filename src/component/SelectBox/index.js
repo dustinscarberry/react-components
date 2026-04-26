@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
 
-const SelectBox = ({name, value = '', options = [], includeBlank = false, onChange}) => {
+export const SelectBox = ({name, value = '', options = [], includeBlank = false, onChange}) => {
   const optionNodes = options.map((option, i) => {
     return <option key={i} value={option.key}>{option.value}</option>
   });
@@ -10,8 +10,8 @@ const SelectBox = ({name, value = '', options = [], includeBlank = false, onChan
   if (includeBlank)
     optionNodes.unshift(<option key="-1" value=""></option>);
 
-  return <div className="select-wrapper">
-    <select className="form-control" name={name} onChange={onChange} value={value}>
+  return <div className="rc-select-wrapper">
+    <select className="rc-form-control" name={name} onChange={onChange} value={value}>
       {optionNodes}
     </select>
   </div>

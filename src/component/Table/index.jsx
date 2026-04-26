@@ -6,7 +6,7 @@ import TableFooter from './TableFooter';
 import { useDebounce } from './logic';
 import './styles.scss';
 
-const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, fetchData, noRecordsText = 'No records found'}) => {
+export const Table = ({headers, data, searchable = false, sortable = false, totalRecords, pageSize = 50, fetchData, noRecordsText = 'No records found'}) => {
   const [search, setSearch] = useState('');
   const [sortColumn, setSortColumn] = useState(undefined);
   const [sortDirection, setSortDirection] = useState('desc');
@@ -62,7 +62,7 @@ const Table = ({headers, data, searchable = false, sortable = false, totalRecord
         </div>
       }
     </div>
-    <table className="table-simple">
+    <table className="rc-table-simple">
       <TableHead
         headers={headers}
         sortable={sortable}

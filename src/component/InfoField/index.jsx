@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-const InfoField = ({ label, value }) => {
-  return <div className="info-field">
+export const InfoField = ({ label, value }) => {
+  return <div className="rc-info-field">
     <label className="info-label">{label}</label>
     <span className="info-value">{value}</span>
   </div>
@@ -20,4 +20,4 @@ InfoField.propTypes = {
   value: PropTypes.string
 };
 
-export default InfoField;
+export default InfoField

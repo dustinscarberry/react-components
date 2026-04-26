@@ -2,8 +2,8 @@ import React from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
 
-const TextArea = ({name, value = '', onChange}) => {
-  return <textarea className="form-control" name={name} onChange={onChange} value={value}/>
+export const TextArea = ({name, value = '', onChange}) => {
+  return <textarea className="rc-textarea rc-form-control" name={name} onChange={onChange} value={value}/>
 }
 
 TextArea.propTypes = {

@@ -1,8 +1,8 @@
 {
   "name": "@dustinscarberry/react-components",
-  "version": "1.0.17",
+  "version": "1.0.21",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/esm/index.js",
   "files": [
     "/dist"
   ],
@@ -22,9 +22,8 @@
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "@storybook/addon-docs": "^10.2.15",
+    "@storybook/addon-docs": "^10.3.5",
     "@storybook/addon-links": "^10.2.15",
-    "@storybook/addon-onboarding": "^10.2.15",
     "@storybook/addon-styling-webpack": "^3.0.0",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.2",
     "@storybook/react-webpack5": "^10.2.15",
@@ -39,7 +38,7 @@
     "rollup": "^4.59.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.97.3",
+    "sass": "^1.99.0",
     "sass-loader": "^16.0.7",
     "storybook": "^10.2.15",
     "style-loader": "^4.0.0"
@@ -48,5 +47,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ]
 }

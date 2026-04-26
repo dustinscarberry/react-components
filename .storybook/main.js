@@ -4,7 +4,7 @@ const require = createRequire(import.meta.url);
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-onboarding", {
+  addons: ["@storybook/addon-links", {
     name: '@storybook/addon-styling-webpack',
     options: {
       rules: [
@@ -16,7 +16,9 @@ const config = {
             "css-loader",
             {
               loader: "sass-loader",
-              options: { implementation: require.resolve("sass") }
+              options: {
+                implementation: require.resolve("sass")
+              }
             },
           ],
         },

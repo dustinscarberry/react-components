@@ -1,0 +1,40 @@
+import { Meta, Title, IconGallery, IconItem, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as IconStories from './Icon.stories';
+import * as Icons from '../component/Icons';
+
+<Meta title="Icons" />
+<Title>Icons</Title>
+
+These are the icons currently available as React components.
+
+<ArgTypes of={IconStories}/>
+
+<IconGallery>
+  <IconItem name="IconChevronDown">
+    <Icons.IconChevronDown/>
+  </IconItem>
+  <IconItem name="IconChevronUp">
+    <Icons.IconChevronUp/>
+  </IconItem>
+  <IconItem name="IconChevronRight">
+    <Icons.IconChevronRight/>
+  </IconItem>
+  <IconItem name="IconChevronLeft">
+    <Icons.IconChevronLeft/>
+  </IconItem>
+  <IconItem name="IconError">
+    <Icons.IconError/>
+  </IconItem>
+  <IconItem name="IconInfo">
+    <Icons.IconInfo/>
+  </IconItem>
+  <IconItem name="IconSuccess">
+    <Icons.IconSuccess/>
+  </IconItem>
+  <IconItem name="IconTimes">
+    <Icons.IconTimes/>
+  </IconItem>
+  <IconItem name="IconWarning">
+    <Icons.IconWarning/>
+  </IconItem>
+</IconGallery>

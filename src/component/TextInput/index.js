@@ -2,10 +2,10 @@ import React from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
 
-const TextInput = ({name, value = '', onChange, onBlur, readonly = false, autoFocus, ref}) => {
+export const TextInput = ({name, value = '', onChange, onBlur, readonly = false, autoFocus, ref}) => {
   return <input
     type="text"
-    className="form-control"
+    className="rc-form-control"
     name={name}
     autoFocus={autoFocus}
     onChange={onChange}

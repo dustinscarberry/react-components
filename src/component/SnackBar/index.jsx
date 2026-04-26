@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import './styles.scss';
 import PropTypes from 'prop-types';
 
-const SnackBar = ({
+export const SnackBar = ({
   text,
   type,
   onClose,
@@ -55,7 +55,7 @@ const SnackBar = ({
   if (text == undefined) return null;
 
   return <div className={classnames(
-    'snackbar', {
+    'rc-snackbar', {
       'is-success': type == 'success',
       'is-error': type == 'error',
       'is-dark-notification': type == 'notification-dark',
@@ -65,7 +65,7 @@ const SnackBar = ({
   }>
     {getIcon(type)}
     {text}
-    {closeBtn && 
+    {closeBtn &&
       <button onClick={() => closeSnackbar()}></button>
     }
   </div>

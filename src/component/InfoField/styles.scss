@@ -1,21 +1,21 @@
 // info field
-.info-field {
-    display: flex;
-    border-bottom: 1px solid #989ba2;
-    margin-bottom: 2.5rem;
-    width: 100%;
+.rc-info-field {
+  display: flex;
+  border-bottom: 1px solid #989ba2;
+  margin-bottom: 2.5rem;
+  width: 100%;
 
-    .info-label {
-        text-align: left;
-        flex: 1;
-        line-height: 35px;
-        color: #989ba2;
-    }
+  .info-label {
+    text-align: left;
+    flex: 1;
+    line-height: 35px;
+    color: #989ba2;
+  }
 
-    .info-value {
-        text-align: right;
-        flex: 1;
-        line-height: 35px;
-        color: #989ba2;
-    }
+  .info-value {
+    text-align: right;
+    flex: 1;
+    line-height: 35px;
+    color: #989ba2;
+  }
 }
