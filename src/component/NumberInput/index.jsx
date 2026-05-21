@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-export const NumberInput = ({name, value = undefined, onChange}) => {
-  return <input type="number" className="rc-form-control" name={name} onChange={onChange} value={value}/>
+export const NumberInput = ({name, value = undefined, onChange, readOnly = false, ...otherProps}) => {
+  return <input type="number" className="rc-form-control" name={name} onChange={onChange} value={value} readOnly={readOnly}  {...otherProps}/>
 }
 
 NumberInput.propTypes = {
   name: PropTypes.string,
   value: PropTypes.number,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  readOnly: PropTypes.bool
 }
 
 export default NumberInput;
